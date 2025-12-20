@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quà Giáng Sinh cho Changg 🎄</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-bg"></div>
+
+    <!-- Snowfall -->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+    </div>
+
+    <!-- Floating decorations -->
+    <div class="floating-decorations">
+        <span class="floating-item">🎄</span>
+        <span class="floating-item">⭐</span>
+        <span class="floating-item">🎁</span>
+        <span class="floating-item">🔔</span>
+        <span class="floating-item">❄️</span>
+        <span class="floating-item">✨</span>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="screen active">
+        <div class="loading-content">
+            <div class="loading-icon-wrapper">
+                <div class="loading-glow"></div>
+                <div class="loading-icon">🎁</div>
+            </div>
+            <h1>Đang tải quà cho Changg...</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+                <div class="loading-shimmer"></div>
+            </div>
+            <p class="loading-hint">✨ Chờ xíu nha bé ✨</p>
+        </div>
+    </div>
+
+    <!-- Gift Box Screen -->
+    <div id="gift-screen" class="screen">
+        <div class="gift-content">
+            <div class="sparkle-container">
+                <span class="sparkle">✨</span>
+                <span class="sparkle">✨</span>
+                <span class="sparkle">✨</span>
+                <span class="sparkle">✨</span>
+            </div>
+            <h2>Changg ơi, có quà nè!</h2>
+            <p>Nhấn vào hộp quà để mở nhé 💝</p>
+            <div class="gift-box" id="gift-box">
+                <div class="gift-glow"></div>
+                <div class="gift-lid">
+                    <div class="gift-bow">
+                        <div class="bow-center"></div>
+                    </div>
+                </div>
+                <div class="gift-body">
+                    <div class="gift-ribbon-v"></div>
+                    <div class="gift-ribbon-h"></div>
+                </div>
+            </div>
+            <p class="tap-hint">👆 Tap để mở</p>
+        </div>
+    </div>
+
+    <!-- Letter Screen -->
+    <div id="letter-screen" class="screen">
+        <div class="letter-content">
+            <div class="letter-wrapper">
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                </div>
+                <div class="letter">
+                    <div class="letter-decoration top-left">❄️</div>
+                    <div class="letter-decoration top-right">❄️</div>
+                    <div class="letter-decoration bottom-left">🎄</div>
+                    <div class="letter-decoration bottom-right">🎄</div>
+                    <div class="letter-header">
+                        <span class="header-icon">💌</span>
+                        Gửi Changg yêu dấu
+                        <span class="header-icon">💌</span>
+                    </div>
+                    <div class="letter-body">
+                        <p>Làm hòa nhé em...</p>
+                    </div>
+                    <div class="letter-choices">
+                        <button id="btn-yes" class="btn btn-yes">
+                            <span class="btn-icon">💕</span>
+                            <span>Có</span>
+                        </button>
+                        <button id="btn-no" class="btn btn-no">
+                            <span class="btn-icon">😤</span>
+                            <span>Không</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Message Screen -->
+    <div id="final-screen" class="screen">
+        <div class="final-content">
+            <div class="hearts-bg">
+                <span class="floating-heart">💖</span>
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💗</span>
+                <span class="floating-heart">💝</span>
+                <span class="floating-heart">💖</span>
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💗</span>
+                <span class="floating-heart">💝</span>
+            </div>
+            <div class="heart-animation">💖</div>
+            <div class="message-box">
+                <div class="message-glow"></div>
+                <p class="message-line">Giáng sinh vui vẻ nha bé 🎄</p>
+                <p class="message-line">Anh có món quà nhỏ tặng bé nè</p>
+                <p class="message-line">Mong bé bớt giận anh nha</p>
+                <p class="message-line">Anh xin lỗi vì làm em buồn</p>
+                <p class="message-line">Anh hứa sẽ không như thế nữa</p>
+                <p class="message-line">Mong từ giờ anh và em sẽ hoà thuận hơn</p>
+                <p class="message-line">Không còn cãi vã nữa</p>
+                <p class="message-line highlight">Yêu em 🫶</p>
+            </div>
+            <div class="christmas-wish">
+                <p>💕 Bé Changg của anh 💕</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="click-sound" preload="auto">
+        <source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
