@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noel của Lan Hươngg 🎄</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== LOADING SCREEN ===== -->
+    <div class="lanhgne-loading" id="loadingScreen">
+        <div class="lanhgne-loading__content">
+            <div class="lanhgne-loading__ornament">
+                <div class="lanhgne-loading__ball"></div>
+                <div class="lanhgne-loading__string"></div>
+            </div>
+            <div class="lanhgne-loading__tree">
+                <div class="lanhgne-loading__tree-part lanhgne-loading__tree-part--1"></div>
+                <div class="lanhgne-loading__tree-part lanhgne-loading__tree-part--2"></div>
+                <div class="lanhgne-loading__tree-part lanhgne-loading__tree-part--3"></div>
+                <div class="lanhgne-loading__tree-trunk"></div>
+                <div class="lanhgne-loading__tree-star">⭐</div>
+                <div class="lanhgne-loading__tree-lights">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="lanhgne-loading__text">
+                <p class="lanhgne-loading__title">🎄 Merry Christmas 🎄</p>
+                <p class="lanhgne-loading__subtitle">Đang chuẩn bị điều bất ngờ cho</p>
+                <p class="lanhgne-loading__name">Lan Hươngg</p>
+            </div>
+            <div class="lanhgne-loading__progress">
+                <div class="lanhgne-loading__progress-bar"></div>
+            </div>
+            <div class="lanhgne-loading__gifts">
+                <span>🎁</span><span>🎀</span><span>🎁</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tuyết rơi -->
+    <div class="lanhgne-snow-container" id="snowContainer"></div>
+
+    <!-- ===== TRANG 1: MỞ ĐẦU ===== -->
+    <section class="lanhgne-page lanhgne-page--intro active" id="pageIntro">
+        <div class="lanhgne-intro__content">
+            <div class="lanhgne-intro__lights">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="lanhgne-intro__character">
+                <img src="lanhgne.png" alt="Lan Hươngg" class="lanhgne-character-img">
+                <div class="lanhgne-speech-bubble">
+                    Ủa… có gì đó đang chờ mình thì phải?
+                </div>
+            </div>
+
+            <div class="lanhgne-intro__text">
+                <p class="lanhgne-text-appear" data-delay="500">Noel này…</p>
+                <p class="lanhgne-text-appear" data-delay="1500">Có một món quà dành cho <strong>Lan Hươngg</strong></p>
+                <p class="lanhgne-text-appear" data-delay="2500">Nhấn vào hộp quà để mở nha 🎄</p>
+            </div>
+
+            <div class="lanhgne-gift-box" id="giftBox">
+                <div class="lanhgne-gift-box__lid"></div>
+                <div class="lanhgne-gift-box__body"></div>
+                <div class="lanhgne-gift-box__ribbon"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRANG 2: BẢN ĐỒ ===== -->
+    <section class="lanhgne-page lanhgne-page--map" id="pageMap">
+        <div class="lanhgne-map__content">
+            <h1 class="lanhgne-map__title">🗺️ Bản đồ Noel của Lan Hươngg</h1>
+
+            <div class="lanhgne-map__intro">
+                <p>Chào <strong>Lan Hươngg</strong>!</p>
+                <p>Đây là một hành trình Noel nhỏ xíu,</p>
+                <p>mỗi điểm dừng là một điều dễ thương dành cho bạn ✨</p>
+            </div>
+
+            <div class="lanhgne-map__path">
+                <svg class="lanhgne-map__line" viewBox="0 0 300 500" preserveAspectRatio="none">
+                    <path d="M150,0 Q50,100 150,150 Q250,200 150,250 Q50,300 150,350 Q250,400 150,450 L150,500"
+                          fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="10,10"/>
+                </svg>
+
+                <div class="lanhgne-map__stops">
+                    <div class="lanhgne-map__stop" data-stop="1" data-target="pageCute">
+                        <div class="lanhgne-map__stop-icon">☁️</div>
+                        <div class="lanhgne-map__stop-label">Góc dễ thương</div>
+                    </div>
+                    <div class="lanhgne-map__stop" data-stop="2" data-target="pageProfile">
+                        <div class="lanhgne-map__stop-icon">🌟</div>
+                        <div class="lanhgne-map__stop-label">Hồ sơ Noel</div>
+                    </div>
+                    <div class="lanhgne-map__stop" data-stop="3" data-target="pageGame">
+                        <div class="lanhgne-map__stop-icon">⭐</div>
+                        <div class="lanhgne-map__stop-label">Trò chơi nhỏ</div>
+                    </div>
+                    <div class="lanhgne-map__stop lanhgne-map__stop--locked" data-stop="4" data-target="pageLetter">
+                        <div class="lanhgne-map__stop-icon">💌</div>
+                        <div class="lanhgne-map__stop-label">Món quà cuối</div>
+                        <div class="lanhgne-map__stop-lock">🔒</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRANG 3: GÓC DỄ THƯƠNG ===== -->
+    <section class="lanhgne-page lanhgne-page--cute" id="pageCute">
+        <div class="lanhgne-cute__content">
+            <div class="lanhgne-cute__window">
+                <div class="lanhgne-cute__snow-outside"></div>
+            </div>
+
+            <div class="lanhgne-cute__lights-string">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="lanhgne-cute__character">
+                <img src="lanhgne.png" alt="Lan Hươngg" class="lanhgne-character-img">
+                <div class="lanhgne-stickers">
+                    <span class="lanhgne-sticker">❄️</span>
+                    <span class="lanhgne-sticker">🎄</span>
+                    <span class="lanhgne-sticker">✨</span>
+                    <span class="lanhgne-sticker">🌟</span>
+                    <span class="lanhgne-sticker">❤️</span>
+                </div>
+            </div>
+
+            <div class="lanhgne-cute__text">
+                <p>Noel là dịp để chậm lại một chút</p>
+                <p>Và cũng là lúc để nhắc rằng</p>
+                <p><strong>Bạn rất dễ thương theo cách riêng của mình ✨</strong></p>
+            </div>
+
+            <div class="lanhgne-cute__quote" id="cuteQuote">
+                "Dễ thương này là thật đó nha"
+            </div>
+
+            <button class="lanhgne-btn lanhgne-btn--back" onclick="goToPage('pageMap')">
+                ← Quay lại bản đồ
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== TRANG 4: HỒ SƠ NOEL ===== -->
+    <section class="lanhgne-page lanhgne-page--profile" id="pageProfile">
+        <div class="lanhgne-profile__content">
+            <h1 class="lanhgne-profile__title">🌟 Hồ sơ Noel của Lan Hươngg</h1>
+
+            <p class="lanhgne-profile__subtitle">Nhấn vào từng thẻ để khám phá nha ✨</p>
+
+            <!-- Progress bar -->
+            <div class="lanhgne-profile__progress">
+                <div class="lanhgne-profile__progress-bar" id="profileProgressBar"></div>
+                <span class="lanhgne-profile__progress-text"><span id="profileProgressCount">0</span>/6</span>
+            </div>
+
+            <!-- Cards grid -->
+            <div class="lanhgne-profile__cards">
+                <div class="lanhgne-profile__card-item" data-index="0">
+                    <div class="lanhgne-profile__card-inner">
+                        <div class="lanhgne-profile__card-front">
+                            <span class="lanhgne-profile__card-icon">😄</span>
+                            <span class="lanhgne-profile__card-title">Tính cách</span>
+                            <span class="lanhgne-profile__card-hint">Nhấn để xem</span>
+                        </div>
+                        <div class="lanhgne-profile__card-back">
+                            <span class="lanhgne-profile__card-icon">😄</span>
+                            <p class="lanhgne-profile__card-text">Vui tính và hay cười - kiểu người khiến không khí lúc nào cũng vui</p>
+                            <div class="lanhgne-profile__card-deco">🌟</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lanhgne-profile__card-item" data-index="1">
+                    <div class="lanhgne-profile__card-inner">
+                        <div class="lanhgne-profile__card-front">
+                            <span class="lanhgne-profile__card-icon">✨</span>
+                            <span class="lanhgne-profile__card-title">Ấn tượng đầu</span>
+                            <span class="lanhgne-profile__card-hint">Nhấn để xem</span>
+                        </div>
+                        <div class="lanhgne-profile__card-back">
+                            <span class="lanhgne-profile__card-icon">✨</span>
+                            <p class="lanhgne-profile__card-text">Dễ thương theo cách rất tự nhiên, không cần cố gắng</p>
+                            <div class="lanhgne-profile__card-deco">🦋</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lanhgne-profile__card-item" data-index="2">
+                    <div class="lanhgne-profile__card-inner">
+                        <div class="lanhgne-profile__card-front">
+                            <span class="lanhgne-profile__card-icon">👖</span>
+                            <span class="lanhgne-profile__card-title">Phong cách</span>
+                            <span class="lanhgne-profile__card-hint">Nhấn để xem</span>
+                        </div>
+                        <div class="lanhgne-profile__card-back">
+                            <span class="lanhgne-profile__card-icon">👖</span>
+                            <p class="lanhgne-profile__card-text">Năng động, thoải mái - đơn giản mà vẫn dễ thương</p>
+                            <div class="lanhgne-profile__card-deco">💫</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lanhgne-profile__card-item" data-index="3">
+                    <div class="lanhgne-profile__card-inner">
+                        <div class="lanhgne-profile__card-front">
+                            <span class="lanhgne-profile__card-icon">💭</span>
+                            <span class="lanhgne-profile__card-title">Cảm nhận</span>
+                            <span class="lanhgne-profile__card-hint">Nhấn để xem</span>
+                        </div>
+                        <div class="lanhgne-profile__card-back">
+                            <span class="lanhgne-profile__card-icon">💭</span>
+                            <p class="lanhgne-profile__card-text">Nói chuyện với bạn luôn có gì đó vui vui khó tả</p>
+                            <div class="lanhgne-profile__card-deco">☀️</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lanhgne-profile__card-item" data-index="4">
+                    <div class="lanhgne-profile__card-inner">
+                        <div class="lanhgne-profile__card-front">
+                            <span class="lanhgne-profile__card-icon">🎄</span>
+                            <span class="lanhgne-profile__card-title">Mùa Noel</span>
+                            <span class="lanhgne-profile__card-hint">Nhấn để xem</span>
+                        </div>
+                        <div class="lanhgne-profile__card-back">
+                            <span class="lanhgne-profile__card-icon">🎄</span>
+                            <p class="lanhgne-profile__card-text">Một mùa Noel đáng nhớ hơn vì có bạn trong năm nay</p>
+                            <div class="lanhgne-profile__card-deco">❄️</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lanhgne-profile__card-item" data-index="5">
+                    <div class="lanhgne-profile__card-inner">
+                        <div class="lanhgne-profile__card-front">
+                            <span class="lanhgne-profile__card-icon">🌟</span>
+                            <span class="lanhgne-profile__card-title">Lời chúc</span>
+                            <span class="lanhgne-profile__card-hint">Nhấn để xem</span>
+                        </div>
+                        <div class="lanhgne-profile__card-back">
+                            <span class="lanhgne-profile__card-icon">🌟</span>
+                            <p class="lanhgne-profile__card-text">Mong bạn luôn vui vẻ và giữ được nụ cười ấy mãi nhé</p>
+                            <div class="lanhgne-profile__card-deco">💖</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result -->
+            <div class="lanhgne-profile__result" id="profileResult">
+                <div class="lanhgne-profile__result-sparkles" id="resultSparkles"></div>
+                <div class="lanhgne-profile__result-badge">🎄</div>
+                <h3>Kết quả xác nhận!</h3>
+                <div class="lanhgne-profile__result-percent">
+                    <span class="lanhgne-profile__result-number">100</span>%
+                </div>
+                <p>xứng đáng có một mùa Noel thật vui</p>
+                <div class="lanhgne-profile__result-message">
+                    Rất vui vì được quen bạn ✨
+                </div>
+                <div class="lanhgne-profile__result-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <button class="lanhgne-btn lanhgne-profile__back" onclick="goToPage('pageMap')">
+                ← Quay lại bản đồ
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== TRANG 5: TRÒ CHƠI ===== -->
+    <section class="lanhgne-page lanhgne-page--game" id="pageGame">
+        <div class="lanhgne-game__content">
+            <h1 class="lanhgne-game__title">⭐ Nhặt sao Noel</h1>
+
+            <div class="lanhgne-game__intro" id="gameIntro">
+                <p>Giúp nhặt 5 ngôi sao Noel nha!</p>
+                <p>Nhặt đủ là mở được món quà cuối ⭐</p>
+                <button class="lanhgne-btn" id="startGameBtn">Bắt đầu chơi!</button>
+            </div>
+
+            <div class="lanhgne-game__area" id="gameArea">
+                <div class="lanhgne-game__score">
+                    <span id="starCount">0</span> / 5 ⭐
+                </div>
+                <div class="lanhgne-game__field" id="gameField"></div>
+                <div class="lanhgne-game__feedback" id="gameFeedback"></div>
+            </div>
+
+            <div class="lanhgne-game__complete" id="gameComplete">
+                <h2>🎉 Xong rồi!</h2>
+                <p>Món quà cuối đang chờ 🎁</p>
+                <button class="lanhgne-btn" id="goToLetterBtn">Mở món quà cuối 💌</button>
+            </div>
+
+            <button class="lanhgne-btn lanhgne-btn--back" onclick="goToPage('pageMap')">
+                ← Quay lại bản đồ
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== TRANG 6: MÓN QUÀ CUỐI ===== -->
+    <section class="lanhgne-page lanhgne-page--letter" id="pageLetter">
+        <div class="lanhgne-letter__content">
+            <div class="lanhgne-letter__envelope" id="envelope">
+                <div class="lanhgne-envelope">
+                    <div class="lanhgne-envelope__flap"></div>
+                    <div class="lanhgne-envelope__body"></div>
+                    <span class="lanhgne-envelope__icon">💌</span>
+                </div>
+                <p>Nhấn để mở thư</p>
+            </div>
+
+            <div class="lanhgne-letter__paper" id="letterPaper">
+                <h2>Thư Noel gửi Lan Hươngg</h2>
+                <div class="lanhgne-letter__lines">
+                    <p class="lanhgne-letter__line" data-delay="500">Năm nay mình rất vui vì được quen bạn</p>
+                    <p class="lanhgne-letter__line" data-delay="1500">Dù chưa nói chuyện được nhiều</p>
+                    <p class="lanhgne-letter__line" data-delay="2500">Nhưng mình thấy bạn là người rất dễ thương và vui tính</p>
+                    <p class="lanhgne-letter__line" data-delay="3500">Mong bạn luôn giữ được nụ cười ấy</p>
+                    <p class="lanhgne-letter__line" data-delay="4500">Chúc bạn một mùa Noel thật ấm áp nhé ✨</p>
+                </div>
+                <div class="lanhgne-letter__wish" data-delay="6000">
+                    🎄 Merry Christmas, Lan Hươngg! 🎄
+                </div>
+                <button class="lanhgne-btn" id="goToEndBtn" data-delay="7000">Tiếp tục →</button>
+            </div>
+
+            <button class="lanhgne-btn lanhgne-btn--back" onclick="goToPage('pageMap')">
+                ← Quay lại bản đồ
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== TRANG 7: KẾT THÚC ===== -->
+    <section class="lanhgne-page lanhgne-page--end" id="pageEnd">
+        <div class="lanhgne-end__content">
+            <div class="lanhgne-confetti" id="confettiContainer"></div>
+
+            <div class="lanhgne-end__hearts" id="heartsContainer"></div>
+
+            <div class="lanhgne-end__text">
+                <h1>Hết rồi nè 🎄</h1>
+                <p>Chúc <strong>Lan Hươngg</strong> một mùa Noel thật ấm áp</p>
+                <p class="lanhgne-end__subtext">Luôn vui vẻ và đáng yêu như vậy nhé 🫶</p>
+            </div>
+
+            <div class="lanhgne-end__character">
+                <img src="lanhgne.png" alt="Lan Hươngg" class="lanhgne-character-img">
+            </div>
+
+            <button class="lanhgne-btn lanhgne-btn--restart" onclick="restartJourney()">
+                Xem lại từ đầu 🔁
+            </button>
+
+            <!-- Secret trigger -->
+            <div class="lanhgne-secret-trigger" id="secretTrigger">
+                <div class="lanhgne-secret-trigger__envelope">
+                    <div class="lanhgne-secret-trigger__flap"></div>
+                    <div class="lanhgne-secret-trigger__body"></div>
+                    <span class="lanhgne-secret-trigger__icon">💌</span>
+                </div>
+                <span class="lanhgne-secret-trigger__hint">?</span>
+            </div>
+        </div>
+
+        <!-- Secret Letter Modal -->
+        <div class="lanhgne-secret-modal" id="secretModal">
+            <div class="lanhgne-secret-modal__overlay"></div>
+            <div class="lanhgne-secret-modal__content">
+                <div class="lanhgne-secret-modal__header">
+                    <span>🤫</span> Một điều bí mật...
+                </div>
+                <div class="lanhgne-secret-modal__body">
+                    <p>Người làm trang web này...</p>
+                    <p>Thật ra là một người khá ít nói với người mới quen.</p>
+                    <p>Trước đây mình thường ở một mình, nên cũng mong tìm được một người đồng hành.</p>
+                    <p>Mình giỏi lắng nghe hơn là nói chuyện.</p>
+                    <p>Nếu có điều gì khiến bạn thấy không vui, mình sẵn sàng ngồi nghe bạn kể.</p>
+                    <p>Cảm ơn vì đã xuất hiện.</p>
+                    <p class="lanhgne-secret-modal__highlight">Mình chỉ mong bạn luôn vui vẻ và hạnh phúc thôi.</p>
+                    <p class="lanhgne-secret-modal__signature">- Người giấu tên :V -</p>
+                </div>
+                <button class="lanhgne-btn lanhgne-secret-modal__close" id="closeSecretBtn">Đóng lại 💝</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom cursor -->
+    <div class="lanhgne-cursor" id="customCursor">⭐</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
